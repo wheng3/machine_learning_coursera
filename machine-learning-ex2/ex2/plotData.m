@@ -12,6 +12,12 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+ad = find(y==1);
+no_ad = find(y==0);
+
+plot(X(ad, 1), X(ad, 2), 'k+','color', 'green', 'MarkerSize', 7);
+plot(X(no_ad, 1), X(no_ad, 2), 'ko', 'MarkerFaceColor', 'red', 'MarkerSize', 7);
+
 
 
 
