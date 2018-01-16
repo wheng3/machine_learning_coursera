@@ -26,7 +26,7 @@ theta_new = theta(2:size(theta,1),:);
 J = 1/(2*m)*(sum(sumsq(X*theta-y))+lambda*sum(sumsq(theta_new)));
 
 % Gradient of linear regression
-grad = 1/m*X'*(X*theta-y)+lambda/m*theta_new;
+grad = 1/m*X'*(X*theta-y)+lambda/m*[0; theta_new];
 
 % =========================================================================
 
