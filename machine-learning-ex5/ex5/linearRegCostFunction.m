@@ -19,16 +19,14 @@ grad = zeros(size(theta));
 %               You should set J to the cost and grad to the gradient.
 %
 
+% Remove theta zero
+theta_new = theta(2:size(theta,1),:);
 
+% Cost of linear regression
+J = 1/(2*m)*(sum(sumsq(X*theta-y))+lambda*sum(sumsq(theta_new)));
 
-
-
-
-
-
-
-
-
+% Gradient of linear regression
+grad = 1/m*X'*(X*theta-y)+lambda/m*theta_new;
 
 % =========================================================================
 
