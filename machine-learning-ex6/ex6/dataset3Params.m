@@ -22,6 +22,7 @@ sigma = 0.3;
 %  Note: You can compute the prediction error using 
 %        mean(double(predictions ~= yval))
 %
+% For both C and  , we suggest trying values in multiplicative steps (e.g., 0.01, 0.03, 0.1, 0.3, 1, 3, 10, 30).
 C_test = [0.01 0.1 1 10]
 sigma_test = [0.01 0.1 1 10]
 max_error = 1
